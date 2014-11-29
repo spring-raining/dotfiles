@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/Aki/Dropbox/HatenaIntern/Hatena-Bookmark/lib/Hatena/Bookmark/Worker/Notify'
+let g:netrw_dirhist_2='/Users/Aki/Dropbox/HatenaIntern/Hatena-Bookmark/lib/Hatena/Bookmark/Worker'
+let g:netrw_dirhist_3='/Users/Aki/.ssh/con'
+let g:netrw_dirhist_4='/Users/Aki/.ssh'
+let g:netrw_dirhist_5='/Users/Aki'
+let g:netrw_dirhist_6='/Users/Aki/Dropbox/Project/Giraf/.git'
+let g:netrw_dirhist_7='/Users/Aki/Desktop/play-scala/app'
+let g:netrw_dirhist_8='/Users/Aki/Desktop/play-scala/app/controllers'
