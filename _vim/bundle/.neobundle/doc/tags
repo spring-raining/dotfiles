@@ -26,7 +26,9 @@
 :NeoBundleUpdate!	neobundle.txt	/*:NeoBundleUpdate!*
 :NeoBundleUpdatesLog	neobundle.txt	/*:NeoBundleUpdatesLog*
 :VimProcBang	vimproc.txt	/*:VimProcBang*
+:VimProcInstall	vimproc.txt	/*:VimProcInstall*
 :VimProcRead	vimproc.txt	/*:VimProcRead*
+g:neobundle#cache_file	neobundle.txt	/*g:neobundle#cache_file*
 g:neobundle#default_options	neobundle.txt	/*g:neobundle#default_options*
 g:neobundle#default_site	neobundle.txt	/*g:neobundle#default_site*
 g:neobundle#enable_name_conversion	neobundle.txt	/*g:neobundle#enable_name_conversion*
@@ -38,6 +40,7 @@ g:neobundle#types#git#clone_depth	neobundle.txt	/*g:neobundle#types#git#clone_de
 g:neobundle#types#git#command_path	neobundle.txt	/*g:neobundle#types#git#command_path*
 g:neobundle#types#git#default_protocol	neobundle.txt	/*g:neobundle#types#git#default_protocol*
 g:neobundle#types#git#enable_submodule	neobundle.txt	/*g:neobundle#types#git#enable_submodule*
+g:neobundle#types#git#pull_command	neobundle.txt	/*g:neobundle#types#git#pull_command*
 g:neobundle#types#hg#command_path	neobundle.txt	/*g:neobundle#types#hg#command_path*
 g:neobundle#types#hg#default_protocol	neobundle.txt	/*g:neobundle#types#hg#default_protocol*
 g:neobundle#types#raw#calc_hash_command	neobundle.txt	/*g:neobundle#types#raw#calc_hash_command*
@@ -69,9 +72,11 @@ neobundle#get()	neobundle.txt	/*neobundle#get()*
 neobundle#get_hooks()	neobundle.txt	/*neobundle#get_hooks()*
 neobundle#get_not_installed_bundle_names()	neobundle.txt	/*neobundle#get_not_installed_bundle_names()*
 neobundle#has_cache()	neobundle.txt	/*neobundle#has_cache()*
+neobundle#has_fresh_cache()	neobundle.txt	/*neobundle#has_fresh_cache()*
 neobundle#hooks	neobundle.txt	/*neobundle#hooks*
 neobundle#is_installed()	neobundle.txt	/*neobundle#is_installed()*
 neobundle#is_sourced()	neobundle.txt	/*neobundle#is_sourced()*
+neobundle#load_toml()	neobundle.txt	/*neobundle#load_toml()*
 neobundle#local()	neobundle.txt	/*neobundle#local()*
 neobundle#rc()	neobundle.txt	/*neobundle#rc()*
 neobundle#source()	neobundle.txt	/*neobundle#source()*
@@ -88,13 +93,16 @@ neobundle-hooks-on_source	neobundle.txt	/*neobundle-hooks-on_source*
 neobundle-install	neobundle.txt	/*neobundle-install*
 neobundle-interface	neobundle.txt	/*neobundle-interface*
 neobundle-introduction	neobundle.txt	/*neobundle-introduction*
+neobundle-migrate-from-pathogen	neobundle.txt	/*neobundle-migrate-from-pathogen*
 neobundle-options	neobundle.txt	/*neobundle-options*
 neobundle-options-augroup	neobundle.txt	/*neobundle-options-augroup*
 neobundle-options-autoload	neobundle.txt	/*neobundle-options-autoload*
 neobundle-options-base_path	neobundle.txt	/*neobundle-options-base_path*
 neobundle-options-build	neobundle.txt	/*neobundle-options-build*
+neobundle-options-build_commands	neobundle.txt	/*neobundle-options-build_commands*
 neobundle-options-default	neobundle.txt	/*neobundle-options-default*
 neobundle-options-depends	neobundle.txt	/*neobundle-options-depends*
+neobundle-options-directory	neobundle.txt	/*neobundle-options-directory*
 neobundle-options-disabled	neobundle.txt	/*neobundle-options-disabled*
 neobundle-options-external_commands	neobundle.txt	/*neobundle-options-external_commands*
 neobundle-options-focus	neobundle.txt	/*neobundle-options-focus*
