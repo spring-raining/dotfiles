@@ -3,7 +3,7 @@ set backspace=indent,eol,start
 
 set nobackup
 set viminfo=!,'50,<1000,s100,\"50 "
-set history=100 
+set history=100
 
 "
 "   neobundle
@@ -214,4 +214,53 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
+
+" ブラケット入力補助
+function! CloseBrackets(rbracket)
+    let char = getline('.')[col('.') - 1]
+    if     char != "\"" && a:rbracket == "\""
+        return "\"\"\<Left>"
+    elseif char != "\'" && a:rbracket == "\'"
+        return "\'\'\<Left>"
+    elseif char == a:rbracket
+        return "\<Right>"
+    else
+        return a:rbracket
+    endif
+endfunction
+
+function! DeleteBrackets()
+    let pos = col('.') - 1
+    let line = getline('.')
+    let lbrackets = ['(', '{', '[', "\'", "\""]
+    let rbrackets = [')', '}', ']', "\'", "\""]
+    let i = 0
+    let output = ''
+
+    if pos == strlen(line)
+        return "\b"
+    endif
+    for c in lbrackets
+        if line[pos-1] == c && line[pos] == rbrackets[i]
+            let output = "\<Right>\b"
+            break
+        endif
+        let i += 1
+    endfor
+    return output."\b"
+endfunction
+
+inoremap ( ()<Left>
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap <silent> ) <C-R>=CloseBrackets(")")<CR>
+inoremap <silent> } <C-R>=CloseBrackets("}")<CR>
+inoremap <silent> ] <C-R>=CloseBrackets("]")<CR>
+inoremap <silent> " <C-R>=CloseBrackets("\"")<CR>
+inoremap <silent> ' <C-R>=CloseBrackets("\'")<CR>
+inoremap <silent> <BS> <C-R>=DeleteBrackets()<CR>
+
+" Shift+Enter(Ctrl+])で新しい行
+inoremap <S-CR> <Esc>o
+inoremap <C-]> <Esc>o
 
