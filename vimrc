@@ -2,5 +2,5 @@
 " profile start profile.txt
 " profile file ~/.vim/rc/*
 if 1
-  execute 'source' './vim/rc/vimrc'
+  execute 'source' '~/dotfiles/vim/rc/vimrc'
 endif

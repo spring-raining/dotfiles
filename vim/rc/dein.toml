@@ -3,13 +3,7 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
-
-  [plugins.build]
-  windows = 'tools\\update-dll-mingw'
-  cygwin  = 'make -f make_cygwin.mak'
-  mac     = 'make -f make_mac.mak'
-  linux   = 'make'
-  unix    = 'gmake'
+build = 'make'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -17,15 +11,12 @@ hook_add = '''
   let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'component': {
-      \   'readonly': '%{&readonly?"⭤":""}',
+      \   'readonly': '%{&readonly?"✗":""}',
       \ },
-      \ 'separator': { 'left': "\u2b80", 'right': "\u2b82" },
-      \ 'subseparator': { 'left': "\u2b81", 'right': "\u2b83" },
+      \ 'separator': { 'left': "", 'right': "" },
+      \ 'subseparator': { 'left': ">", 'right': "<" },
       \ }
 '''
-
-[[plugins]]
-repo = 'tomasr/molokai'
 
 [[plugins]]
 repo = 'mattn/emmet-vim'

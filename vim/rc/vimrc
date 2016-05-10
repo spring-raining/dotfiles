@@ -53,11 +53,10 @@ set list           " 不可視文字を表示
 set listchars=tab:\|\ ,trail:-,extends:❯,precedes:❮
 " カラースキーマ設定
 if has('nvim')
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
 set t_Co=256
 colorscheme molokai
-set background=dark
 
 " マウスを有効にする
 if has('mouse')
