@@ -5,6 +5,11 @@ set nobackup
 set viminfo=!,'50,<1000,s100,\"50 "
 set history=100
 
+" Python
+" pip2 install neovim && pip3 install neovimでセットアップ
+let g:python_host_skip_check = 1
+let g:python3_host_skip_check = 1
+
 "
 " dein.vim
 "
