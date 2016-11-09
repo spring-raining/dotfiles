@@ -5,3 +5,11 @@ repo = 'Shougo/unite.vim'
 repo = 'fatih/vim-go'
 on_ft = 'go'
 
+[[plugins]]
+repo = 'digitaltoad/vim-pug'
+on_ft = ['pug','jade']
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+
