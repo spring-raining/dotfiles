@@ -4,5 +4,6 @@
   "editor.renderControlCharacters": true,
   "editor.renderIndentGuides": true,
   "typescript.check.workspaceVersion": false,
-  "typescript.check.tscVersion": false
+  "typescript.check.tscVersion": false,
+  "workbench.colorTheme": "Monokai"
 }
