@@ -1,0 +1,23 @@
+---
+- name: Install rustup
+  shell: curl https://sh.rustup.rs -sSf | sh -s -- -y
+
+- name: Add cargo path
+  blockinfile:
+    path: ~/.zshrc
+    marker: "# {mark} ANSIBLE MANAGED BLOCK FOR CARGO"
+    content: |
+      source $HOME/.cargo/env
+
+- name: Load zshrc
+  shell: source ~/.zshrc
+  args:
+    executable: /usr/local/bin/zsh
+
+- name: Install rust nightly
+  shell: |
+    ~/.cargo/bin/rustup toolchain install nightly
+    ~/.cargo/bin/rustup default nightly
+
+- name: Install wasm target
+  shell: ~/.cargo/bin/rustup target add wasm32-unknown-unknown --toolchain nightly

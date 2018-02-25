@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: no
+  roles:
+    - install-via-homebrew
+    - zsh
+    - node
+    - python
+    - rust

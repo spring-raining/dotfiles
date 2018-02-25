@@ -1,0 +1,25 @@
+---
+- name: Install nodebrew
+  homebrew:
+    name: nodebrew
+
+- name: Setup nodebrew
+  shell: /usr/local/opt/nodebrew/bin/nodebrew setup_dirs
+
+- name: Add nodebrew path
+  blockinfile:
+    path: ~/.zshrc
+    marker: "# {mark} ANSIBLE MANAGED BLOCK FOR NODEBREW"
+    content: |
+      export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+- name: Install latest Node.js
+  shell: |
+    nodebrew install-binary latest
+    nodebrew use latest
+
+- name: Install yarn
+  npm:
+    name: yarn
+    global: yes
+    executable: ~/.nodebrew/current/bin/npm

@@ -1,0 +1,89 @@
+---
+homebrew_taps:
+  - caskroom/cask
+
+homebrew_packages:
+  # - { name: ansible}
+  - { name: autoconf }
+  - { name: autojump }
+  - { name: automake }
+  - { name: awscli }
+  - { name: boost }
+  - { name: cabal-install }
+  - { name: cairo}
+  - { name: carthage }
+  - { name: cmake }
+  - { name: cowsay}
+  - { name: curl }
+  - { name: ffmpeg }
+  - { name: flow }
+  - { name: gcc }
+  - { name: ghc }
+  - { name: gibo }
+  - { name: git }
+  - { name: go }
+  - { name: graphviz }
+  - { name: imagemagick }
+  - { name: jpeg }
+  - { name: jq }
+  - { name: libpng }
+  - { name: libtiff}
+  - { name: libtool }
+  - { name: llvm }
+  - { name: mecab }
+  - { name: mecab-ipadic }
+  - { name: memcached }
+  - { name: mercurial }
+  - { name: mysql}
+  - { name: neovim }
+  - { name: nginx }
+  - { name: nkf }
+  - { name: openssl }
+  - { name: openssl, state: linked, install_options: force }
+  - { name: peco }
+  - { name: pkg-config }
+  - { name: rbenv }
+  - { name: ruby-build }
+  - { name: readline}
+  - { name: redis }
+  - { name: sbt }
+  - { name: sqlite }
+  - { name: tig }
+  - { name: tmux }
+  - { name: tree }
+  - { name: watch }
+  - { name: watchman }
+  - { name: wget }
+  - { name: xz }
+  - { name: zsh, install_options: disable-etcdir }
+
+homebrew_cask_packages:
+  - { name: '0xed' }
+  - { name: adobe-creative-cloud }
+  - { name: android-sdk }
+  # - { name: atom }
+  - { name: coteditor }
+  - { name: docker }
+  - { name: dropbox }
+  - { name: firefox }
+  - { name: github }
+  - { name: glyphs }
+  - { name: google-backup-and-sync }
+  - { name: google-chrome }
+  - { name: grammarly }
+  - { name: grandperspective }
+  - { name: gyazo }
+  - { name: hyper }
+  - { name: iterm2 }
+  - { name: java }
+  - { name: nextcloud}
+  - { name: sequel-pro }
+  - { name: skype }
+  - { name: slack }
+  - { name: spotify }
+  - { name: vagrant }
+  - { name: virtualbox }
+  - { name: visual-studio-code }
+  - { name: vlc }
+  - { name: vmware-fusion }
+  - { name: wireshark }

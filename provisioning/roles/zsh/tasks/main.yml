@@ -1,0 +1,14 @@
+---
+- name: Install zsh
+  homebrew:
+    name: zsh
+    install_options: disable-etcdir
+
+- name: Add installed zsh in shells
+  lineinfile:
+    path: /etc/shells
+    line: '/usr/local/bin/zsh'
+  become: yes
+
+- name: Use installed zsh
+  shell: chsh -s /usr/local/bin/zsh
