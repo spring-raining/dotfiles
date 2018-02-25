@@ -1,8 +1,23 @@
 // Place your settings in this file to overwrite the default settings
 {
+  "editor.minimap.enabled": true,
   "editor.renderWhitespace": "boundary",
   "editor.renderControlCharacters": true,
   "editor.renderIndentGuides": true,
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "javascript": "javascriptreact"
+  },
   "typescript.check.workspaceVersion": false,
-  "typescript.check.tscVersion": false
+  "typescript.check.tscVersion": false,
+  "workbench.activityBar.visible": true,
+  "workbench.colorTheme": "MyMonokai",
+  "window.zoomLevel": 0,
+  "extensions.ignoreRecommendations": false,
+  "explorer.confirmDragAndDrop": false,
+  "rust.mode": "legacy",
+  "rust.rustup": {
+    "toolchain": "nightly-x86_64-apple-darwin"
+  },
+  "lldb.executable": "/usr/bin/lldb"
 }
