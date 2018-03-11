@@ -11,7 +11,13 @@
   "typescript.check.workspaceVersion": false,
   "typescript.check.tscVersion": false,
   "workbench.activityBar.visible": true,
-  "workbench.colorTheme": "MyMonokai",
+  "workbench.colorTheme": "Monokai",
+  "workbench.colorCustomizations": {
+    "[Monokai]":{
+      "editor.background": "#1e1e1e",
+      "statusBar.background": "#1e815e"
+    }
+  },
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
   "explorer.confirmDragAndDrop": false,
