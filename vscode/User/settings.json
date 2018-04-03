@@ -1,6 +1,10 @@
 // Place your settings in this file to overwrite the default settings
 {
+  "editor.fontFamily": "'Meslo LG S DZ for Powerline', Menlo, monospace",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 19,
   "editor.minimap.enabled": true,
+  "editor.mouseWheelZoom": true,
   "editor.renderWhitespace": "boundary",
   "editor.renderControlCharacters": true,
   "editor.renderIndentGuides": true,
