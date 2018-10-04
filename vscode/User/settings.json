@@ -21,10 +21,12 @@
   "editor.fontWeight": "500",
   "editor.lineHeight": 19,
   "editor.minimap.enabled": false,
+  "editor.mouseWheelZoom": true,
   "workbench.colorTheme": "Monokai",
   "workbench.colorCustomizations": {
     "[Monokai]": {
-      "editor.background": "#262626"
+      "editor.background": "#1e1e1e",
+      "statusBar.background": "#1e815e"
     }
   },
   "emmet.includeLanguages": {
