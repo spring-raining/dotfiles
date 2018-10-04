@@ -1,23 +1,46 @@
 // Place your settings in this file to overwrite the default settings
 {
-  "editor.minimap.enabled": true,
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
   "editor.renderWhitespace": "boundary",
   "editor.renderControlCharacters": true,
   "editor.renderIndentGuides": true,
+  "editor.wordWrap": false,
+  "editor.fontFamily": "'Inconsolata for Powerline', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.fontWeight": "500",
+  "editor.lineHeight": 19,
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Monokai",
+  "workbench.colorCustomizations": {
+    "[Monokai]": {
+      "editor.background": "#262626"
+    }
+  },
   "emmet.includeLanguages": {
     "vue-html": "html",
-    "javascript": "javascriptreact"
+    "javascript": "javascriptreact",
+    "typescript": "javascriptreact",
+    "typescriptreact": "javascriptreact"
   },
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+  "emmet.triggerExpansionOnTab": true,
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
   "typescript.check.workspaceVersion": false,
   "typescript.check.tscVersion": false,
   "workbench.activityBar.visible": true,
-  "workbench.colorTheme": "MyMonokai",
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
   "explorer.confirmDragAndDrop": false,
-  "rust.mode": "legacy",
-  "rust.rustup": {
-    "toolchain": "nightly-x86_64-apple-darwin"
-  },
   "lldb.executable": "/usr/bin/lldb"
 }
