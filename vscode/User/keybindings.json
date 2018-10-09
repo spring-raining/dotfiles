@@ -4,5 +4,17 @@
         "key": "shift+enter",
         "command": "editor.action.insertLineAfter",
         "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.terminal.moveToLineEnd"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "cursorLineStart"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "cursorLineEnd"
     }
 ]
