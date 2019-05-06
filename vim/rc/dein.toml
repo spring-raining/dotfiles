@@ -1,7 +1,4 @@
 [[plugins]]
-repo = 'Shougo/dein.vim'
-
-[[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
@@ -23,3 +20,7 @@ repo = 'mattn/emmet-vim'
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
+hook_add = '''
+  let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
+  let g:Editorconfig_core_mode = 'python_external'
+'''
