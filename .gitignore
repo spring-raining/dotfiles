@@ -5,3 +5,7 @@
 .DS_Store
 
 *.retry
+
+# zsh
+/zsh/local.zsh
+*.zwc
