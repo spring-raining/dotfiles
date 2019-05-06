@@ -44,5 +44,10 @@
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
   "explorer.confirmDragAndDrop": false,
-  "lldb.executable": "/usr/bin/lldb"
+  "rust.mode": "legacy",
+  "rust.rustup": {
+    "toolchain": "nightly-x86_64-apple-darwin"
+  },
+  "lldb.executable": "/usr/bin/lldb",
+  "git.autofetch": true
 }
