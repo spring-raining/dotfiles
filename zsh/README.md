@@ -2,9 +2,13 @@
 
 ```sh
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+
+zconfigs=("zlogin" "zlogout" "zprofile" "zshenv")
+for rc in "${zconfigs[@]}"; do
+  rcfile="${ZDOTDIR:-$HOME}/.zprezto/runcoms/${rc}"
+  ln -s $rcfile ${ZDOTDIR:-$HOME}/.${rc}
 done
+ln -s ~/dotfiles/zsh/zprezto.zsh ~/.zpreztorc
 ```
 
 ## Install
