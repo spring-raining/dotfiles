@@ -15,11 +15,11 @@
       fi
 
 - name: Get latest Python2 version
-  shell: pyenv install -l | grep -e '2.[0-9].[0-9]$' | grep -v - | tail -1
+  shell: pyenv install -l | grep -e '2.[0-9]\+.[0-9]\+$' | grep -v - | tail -1
   register: python2_version
 
 - name: Get latest Python3 version
-  shell: pyenv install -l | grep -e '3.[0-9].[0-9]$' | grep -v - | tail -1
+  shell: pyenv install -l | grep -e '3.[0-9]\+.[0-9]\+$' | grep -v - | tail -1
   register: python3_version
 
 - name: Install Python2
@@ -35,22 +35,23 @@
 
 - name: Install python packages
   pip:
+    executable: pip3
     name:
-      - chainer
+      #- chainer
       - Cython
       - Flask
-      - fonttools
+      #- fonttools
       - jupyter
       - jupyterlab
       - numpy
       - pandas
-      - pycairo
+      #- pycairo
       - requests
       - setuptools
       - scikit-learn
       - scipy
       - six
       - tables
-      - tensorflow
-      - tensorflow-tensorboard
+      #- tensorflow
+      #- tensorflow-tensorboard
       - wheel

@@ -19,7 +19,6 @@
     nodebrew use latest
 
 - name: Install yarn
-  npm:
-    name: yarn
-    global: yes
-    executable: ~/.nodebrew/current/bin/npm
+  shell: |
+    export PATH=$HOME/.nodebrew/current/bin:$PATH
+    npm install -g yarn

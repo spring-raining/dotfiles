@@ -1,6 +1,7 @@
 ---
 homebrew_taps:
-  - caskroom/cask
+  - homebrew/cask
+  - homebrew/cask-versions
 
 homebrew_packages:
   # - { name: ansible}
@@ -30,8 +31,8 @@ homebrew_packages:
   - { name: libtiff}
   - { name: libtool }
   - { name: llvm }
-  - { name: mecab }
-  - { name: mecab-ipadic }
+  #- { name: mecab }
+  #- { name: mecab-ipadic }
   - { name: memcached }
   - { name: mercurial }
   - { name: mysql}
@@ -55,35 +56,44 @@ homebrew_packages:
   - { name: watchman }
   - { name: wget }
   - { name: xz }
-  - { name: zsh, install_options: disable-etcdir }
+  - { name: zsh }
 
 homebrew_cask_packages:
   - { name: '0xed' }
   - { name: adobe-creative-cloud }
-  - { name: android-sdk }
+  - { name: adoptopenjdk }
+  #- { name: android-sdk }
   # - { name: atom }
   - { name: coteditor }
+  - { name: discord }
   - { name: docker }
   - { name: dropbox }
   - { name: firefox }
-  - { name: github }
+  - { name: firefox-nightly }
+  #- { name: github }
   - { name: glyphs }
   - { name: google-backup-and-sync }
   - { name: google-chrome }
+  - { name: google-chrome-canary }
+  - { name: google-cloud-sdk }
+  #- { name: google-japanese-ime }
   - { name: grammarly }
   - { name: grandperspective }
   - { name: gyazo }
   - { name: hyper }
   - { name: iterm2 }
-  - { name: java }
-  - { name: nextcloud}
+  - { name: jetbrains-toolbox }
+  - { name: karabiner-elements }
+  #- { name: nextcloud}
+  - { name: rightfont }
   - { name: sequel-pro }
-  - { name: skype }
+  #- { name: skype }
   - { name: slack }
   - { name: spotify }
-  - { name: vagrant }
-  - { name: virtualbox }
+  #- { name: vagrant }
+  #- { name: virtualbox }
   - { name: visual-studio-code }
   - { name: vlc }
-  - { name: vmware-fusion }
-  - { name: wireshark }
+  #- { name: vmware-fusion }
+  #- { name: wireshark }
+  - { name: zoomus }

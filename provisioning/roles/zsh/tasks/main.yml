@@ -2,7 +2,6 @@
 - name: Install zsh
   homebrew:
     name: zsh
-    install_options: disable-etcdir
 
 - name: Add installed zsh in shells
   lineinfile:

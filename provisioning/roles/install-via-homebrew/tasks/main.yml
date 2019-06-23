@@ -6,6 +6,12 @@
 - name: Update homebrew
   homebrew: update_homebrew=yes
 
+- name: Install cask packages
+  homebrew_cask: >
+    name="{{ item.name }}"
+    state="{{ item.state | default('installed') }}"
+  with_items: "{{ homebrew_cask_packages }}"
+
 - name: Install packages
   homebrew: >
     name="{{ item.name }}"
@@ -14,9 +20,3 @@
       if item.install_options is not string
       else item.install_options }}"
   with_items: "{{ homebrew_packages }}"
-
-- name: Install cask packages
-  homebrew_cask: >
-    name="{{ item.name }}"
-    state="{{ item.state | default('installed') }}"
-  with_items: "{{ homebrew_cask_packages }}"
