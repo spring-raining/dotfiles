@@ -16,3 +16,15 @@ ln -s ~/dotfiles/vscode/User/settings.json $VSCODE_USER/settings.json
 rm -r $VSCODE_USER/snippets
 ln -s ~/dotfiles/vscode/User/snippets $VSCODE_USER/snippets
 ```
+
+## Extensions 列挙
+
+```sh
+code --list-extensions > extensions.txt
+```
+
+## Extensions インストール
+
+```sh
+cat extensions.txt | xargs -L 1 code --instal-extension
+```

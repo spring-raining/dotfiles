@@ -1,7 +1,8 @@
 // Place your settings in this file to overwrite the default settings
 {
   "[typescript]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "editor.formatOnSave": true
@@ -41,7 +42,6 @@
   "typescript.check.workspaceVersion": false,
   "typescript.check.tscVersion": false,
   "workbench.activityBar.visible": true,
-  "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
   "explorer.confirmDragAndDrop": false,
   "rust.mode": "legacy",
@@ -51,5 +51,19 @@
   "lldb.executable": "/usr/bin/lldb",
   "git.autofetch": true,
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "window.zoomLevel": 0,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "javascript.suggest.autoImports": false,
+  "typescript.suggest.autoImports": false,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
 }
