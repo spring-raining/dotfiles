@@ -5,13 +5,14 @@ homebrew_taps:
 
 homebrew_packages:
   # - { name: ansible}
+  - { name: asciinema }
   - { name: autoconf }
   - { name: autojump }
   - { name: automake }
   - { name: awscli }
   - { name: boost }
-  - { name: cabal-install }
-  - { name: cairo}
+  #- { name: cabal-install }
+  - { name: cairo }
   - { name: carthage }
   - { name: cmake }
   - { name: cowsay}
@@ -19,7 +20,8 @@ homebrew_packages:
   - { name: ffmpeg }
   - { name: flow }
   - { name: gcc }
-  - { name: ghc }
+  #- { name: ghc }
+  - { name: ghostscript }
   - { name: gibo }
   - { name: git }
   - { name: go }
@@ -45,9 +47,9 @@ homebrew_packages:
   - { name: pkg-config }
   - { name: rbenv }
   - { name: ruby-build }
-  - { name: readline}
+  - { name: readline }
   - { name: redis }
-  - { name: sbt }
+  #- { name: sbt }
   - { name: sqlite }
   - { name: tig }
   - { name: tmux }
@@ -59,36 +61,44 @@ homebrew_packages:
   - { name: zsh }
 
 homebrew_cask_packages:
-  - { name: '0xed' }
+  #- { name: '0xed' }
   - { name: adobe-creative-cloud }
   - { name: adoptopenjdk }
   #- { name: android-sdk }
   # - { name: atom }
+  - { name: brave-browser }
+  - { name: charles }
   - { name: coteditor }
+  - { name: deepl }
   - { name: discord }
   - { name: docker }
   - { name: dropbox }
+  - { name: figma }
   - { name: firefox }
   - { name: firefox-nightly }
+  - { name: fontexplorer-x-pro }
   #- { name: github }
   - { name: glyphs }
   - { name: google-backup-and-sync }
-  - { name: google-chrome }
+  #- { name: google-chrome }
   - { name: google-chrome-canary }
   - { name: google-cloud-sdk }
-  #- { name: google-japanese-ime }
+  - { name: google-japanese-ime }
   - { name: grammarly }
   - { name: grandperspective }
   - { name: gyazo }
-  - { name: hyper }
+  #- { name: hyper }
   - { name: iterm2 }
   - { name: jetbrains-toolbox }
   - { name: karabiner-elements }
+  - { name: kap }
   #- { name: nextcloud}
-  - { name: rightfont }
+  #- { name: rightfont }
   - { name: sequel-pro }
+  - { name: sketch }
   #- { name: skype }
   - { name: slack }
+  - { name: sloth }
   - { name: spotify }
   #- { name: vagrant }
   #- { name: virtualbox }
@@ -96,4 +106,5 @@ homebrew_cask_packages:
   - { name: vlc }
   #- { name: vmware-fusion }
   #- { name: wireshark }
+  - { name: zeplin }
   - { name: zoomus }

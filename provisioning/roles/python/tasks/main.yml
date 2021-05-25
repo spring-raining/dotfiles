@@ -33,25 +33,3 @@
 - name: Use installed python
   shell: "pyenv global {{ python3_version.stdout }} {{ python2_version.stdout }}"
 
-- name: Install python packages
-  pip:
-    executable: pip3
-    name:
-      #- chainer
-      - Cython
-      - Flask
-      #- fonttools
-      - jupyter
-      - jupyterlab
-      - numpy
-      - pandas
-      #- pycairo
-      - requests
-      - setuptools
-      - scikit-learn
-      - scipy
-      - six
-      - tables
-      #- tensorflow
-      #- tensorflow-tensorboard
-      - wheel
