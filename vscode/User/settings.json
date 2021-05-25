@@ -5,10 +5,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {
     "editor.formatOnSave": true
@@ -55,7 +57,6 @@
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
   "typescript.updateImportsOnFileMove.enabled": "never",
-  "window.zoomLevel": 0,
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
   "javascript.suggest.autoImports": false,
@@ -65,5 +66,13 @@
     "javascriptreact",
     "typescript",
     "typescriptreact"
-  ]
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
