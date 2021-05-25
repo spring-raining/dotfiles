@@ -20,15 +20,15 @@
   "editor.renderIndentGuides": true,
   "editor.wordWrap": false,
   "editor.fontFamily": "'Inconsolata for Powerline', Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 13,
+  "editor.fontSize": 14,
   "editor.fontWeight": "500",
-  "editor.lineHeight": 19,
+  "editor.lineHeight": 20,
   "editor.minimap.enabled": false,
   "editor.mouseWheelZoom": false,
   "workbench.colorTheme": "Monokai",
   "workbench.colorCustomizations": {
     "[Monokai]": {
-      "editor.background": "#1e1e1e",
+      "editor.background": "#17191b",
       "statusBar.background": "#1e815e"
     }
   },
@@ -59,14 +59,17 @@
   "typescript.updateImportsOnFileMove.enabled": "never",
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
-  "javascript.suggest.autoImports": false,
-  "typescript.suggest.autoImports": false,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact"
   ],
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "typescript.tsserver.log": "verbose",
+  "python.jediEnabled": false,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -74,5 +77,25 @@
     "editor.defaultFormatter": "octref.vetur"
   },
   "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "python.languageServer": "Pylance",
+  "python.showStartPage": false,
+  "cloudcode.gke": {
+    "projectIds": [
+      "sustained-spark-267513"
+    ]
+  },
+  "latex-workshop.message.update.show": false,
+  "editor.tabSize": 2,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "jupyter.askForKernelRestart": false,
+  "jupyter.alwaysTrustNotebooks": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "polacode.backgroundColor": "#ffffff",
+  "polacode.transparentBackground": true,
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
