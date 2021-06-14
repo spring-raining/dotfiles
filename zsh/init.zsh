@@ -36,6 +36,44 @@ alias cdtemp="cd $(mktemp -d)"
 alias szshrc="source ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/dotfiles/zsh/local.zsh"
+alias tac='perl -e "print reverse(<>)"'
+
+#
+# functions
+#
+function peco-select-history {
+  BUFFER=$(history -n 1 | tac | peco --prompt="history>" --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle clear-screen
+}
+zle -N peco-select-history
+
+function peco-cdr {
+  local selected_dir="$(cdr -l | sed -e 's/^[[:digit:]]*[[:blank:]]*//' | peco --prompt="cdr>" --query "$LBUFFER")"
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+}
+zle -N peco-cdr
+
+# cdr
+if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]]; then
+  autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+  add-zsh-hook chpwd chpwd_recent_dirs
+  zstyle ':completion:*:*:cdr:*:*' menu selection
+  zstyle ':completion:*' recent-dirs-insert both
+  zstyle ':chpwd:*' recent-dirs-max 500
+  zstyle ':chpwd:*' recent-dirs-default true
+  zstyle ':chpwd:*' recent-dirs-file "${XDG_CACHE_HOME:-$HOME/.cache}/shell/chpwd-recent-dirs"
+  zstyle ':chpwd:*' recent-dirs-pushd true
+fi
+
+#
+# bindkey
+#
+bindkey '^R' peco-select-history
+bindkey '^S' peco-cdr
 
 #
 # user configuration
