@@ -36,7 +36,9 @@ alias cdtemp="cd $(mktemp -d)"
 alias szshrc="source ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/dotfiles/zsh/local.zsh"
-alias tac='perl -e "print reverse(<>)"'
+if [ -n -x $(command -v tac) ]; then
+  alias tac='perl -e "print reverse(<>)"'
+fi
 
 #
 # functions
