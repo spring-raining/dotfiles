@@ -15,10 +15,10 @@
   "[javascriptreact]": {
     "editor.formatOnSave": true
   },
+  "editor.bracketPairColorization.enabled": false,
   "editor.renderWhitespace": "boundary",
   "editor.renderControlCharacters": true,
-  "editor.renderIndentGuides": true,
-  "editor.wordWrap": false,
+  "editor.wordWrap": "off",
   "editor.fontFamily": "'Inconsolata for Powerline', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 14,
   "editor.fontWeight": "500",
@@ -68,13 +68,14 @@
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "typescript.tsserver.log": "verbose",
+  "typescript.tsserver.log": "off",
   "python.jediEnabled": false,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[vue]": {
-    "editor.defaultFormatter": "octref.vetur"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -97,5 +98,34 @@
   },
   "polacode.backgroundColor": "#ffffff",
   "polacode.transparentBackground": true,
-  "javascript.updateImportsOnFileMove.enabled": "always"
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "cSpell.userWords": [
+    "readonly"
+  ],
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.folders.theme": "none",
+  "material-icon-theme.files.associations": {
+    "package.json": "nodejs_alt",
+    "package-lock.json": "nodejs_alt",
+    ".nvmrc": "nodejs_alt",
+    ".esmrc": "nodejs_alt",
+    ".node-version": "nodejs_alt"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "cloudcode.enableMinikubeGcpAuthPlugin": false,
+  "terminal.integrated.fontFamily": "Meslo LG S DZ for Powerline",
+  "terminal.integrated.fontSize": 10,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.indentation": true
 }
