@@ -28,7 +28,7 @@
   "workbench.colorTheme": "Monokai",
   "workbench.colorCustomizations": {
     "[Monokai]": {
-      "editor.background": "#17191b",
+      "editor.background": "#000000",
       "statusBar.background": "#1e815e"
     }
   },
@@ -127,5 +127,15 @@
   "terminal.integrated.fontFamily": "Meslo LG S DZ for Powerline",
   "terminal.integrated.fontSize": 10,
   "editor.guides.bracketPairs": "active",
-  "editor.guides.indentation": true
+  "editor.guides.indentation": true,
+  "editor.stickyScroll.enabled": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "[css,scss]": {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    },
+  }
 }
