@@ -91,7 +91,7 @@ homebrew_cask_packages:
   - { name: fontexplorer-x-pro }
   #- { name: github }
   - { name: glyphs }
-  - { name: google-backup-and-sync }
+  - { name: google-drive }
   #- { name: google-chrome }
   - { name: google-chrome-beta }
   - { name: google-chrome-canary }
