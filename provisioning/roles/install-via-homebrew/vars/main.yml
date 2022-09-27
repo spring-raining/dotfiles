@@ -11,33 +11,44 @@ homebrew_packages:
   - { name: automake }
   - { name: awscli }
   - { name: boost }
+  - { name: brotli }
   #- { name: cabal-install }
   - { name: cairo }
   - { name: carthage }
   - { name: cmake }
-  - { name: cowsay}
+  - { name: cowsay }
   - { name: curl }
+  - { name: deno }
+  - { name: editorconfig }
   - { name: ffmpeg }
-  - { name: flow }
+  # - { name: flow }
   - { name: gcc }
+  - { name: gh }
   #- { name: ghc }
   - { name: ghostscript }
   - { name: gibo }
   - { name: git }
+  - { name: git-lfs }
   - { name: go }
   - { name: graphviz }
+  - { name: htop }
+  - { name: hub }
   - { name: imagemagick }
   - { name: jpeg }
   - { name: jq }
+  - { name: int128/kubelogin/kubelogin }
+  - { name: kubernetes-cli }
+  - { name: lame }
   - { name: libpng }
-  - { name: libtiff}
+  - { name: libtiff }
   - { name: libtool }
   - { name: llvm }
   #- { name: mecab }
   #- { name: mecab-ipadic }
   - { name: memcached }
   - { name: mercurial }
-  - { name: mysql}
+  - { name: mkcert }
+  - { name: mysql }
   - { name: neovim }
   - { name: nginx }
   - { name: nkf }
@@ -45,8 +56,8 @@ homebrew_packages:
   - { name: openssl, state: linked, install_options: force }
   - { name: peco }
   - { name: pkg-config }
-  - { name: rbenv }
-  - { name: ruby-build }
+  # - { name: rbenv }
+  # - { name: ruby-build }
   - { name: readline }
   - { name: redis }
   #- { name: sbt }
@@ -55,15 +66,16 @@ homebrew_packages:
   - { name: tmux }
   - { name: tree }
   - { name: watch }
-  - { name: watchman }
+  # - { name: watchman }
   - { name: wget }
   - { name: xz }
+  - { name: yq }
   - { name: zsh }
 
 homebrew_cask_packages:
   #- { name: '0xed' }
   - { name: adobe-creative-cloud }
-  - { name: adoptopenjdk }
+  # - { name: adoptopenjdk }
   #- { name: android-sdk }
   # - { name: atom }
   - { name: brave-browser }
@@ -81,6 +93,7 @@ homebrew_cask_packages:
   - { name: glyphs }
   - { name: google-backup-and-sync }
   #- { name: google-chrome }
+  - { name: google-chrome-beta }
   - { name: google-chrome-canary }
   - { name: google-cloud-sdk }
   - { name: google-japanese-ime }
@@ -92,9 +105,12 @@ homebrew_cask_packages:
   - { name: jetbrains-toolbox }
   - { name: karabiner-elements }
   - { name: kap }
+  - { name: keycastr }
   #- { name: nextcloud}
+  - { name: raycast }
   #- { name: rightfont }
-  - { name: sequel-pro }
+  - { name: safari-technology-preview }
+  - { name: sequel-ace }
   - { name: sketch }
   #- { name: skype }
   - { name: slack }
@@ -107,4 +123,4 @@ homebrew_cask_packages:
   #- { name: vmware-fusion }
   #- { name: wireshark }
   - { name: zeplin }
-  - { name: zoomus }
+  - { name: zoom }

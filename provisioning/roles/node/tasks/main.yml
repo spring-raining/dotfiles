@@ -1,3 +1,6 @@
 ---
-- name: Install n and latest LTS of Node.js
-  shell: curl -L https://git.io/n-install | bash -s -- -y lts
+- name: Install nvm
+  shell: >
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  args:
+    creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"

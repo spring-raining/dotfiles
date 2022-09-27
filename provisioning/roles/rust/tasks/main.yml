@@ -4,7 +4,7 @@
 
 - name: Add cargo path
   blockinfile:
-    path: ~/.zshrc
+    path: ~/dotfiles/zsh/local.zsh
     marker: "# {mark} ANSIBLE MANAGED BLOCK FOR CARGO"
     content: |
       source $HOME/.cargo/env

@@ -5,7 +5,7 @@
 
 - name: Add pyenv path
   blockinfile:
-    path: ~/.zshrc
+    path: ~/dotfiles/zsh/local.zsh
     marker: "# {mark} ANSIBLE MANAGED BLOCK FOR PYENV"
     content: |
       export PYENV_ROOT=$HOME/.pyenv
