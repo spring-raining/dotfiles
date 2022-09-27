@@ -1,0 +1,14 @@
+---
+- name: Make a screenshot directory
+  file:
+    path: "{{ ansible_env.HOME }}/Screenshots"
+    state: directory
+
+- name: Set macOS defaults
+  osx_defaults: >
+    domain="{{ item.domain }}"
+    key="{{ item.key }}"
+    type="{{ item.type }}"
+    value="{{ item.value }}"
+    state="{{ item.state | default('present') }}"
+  with_items: "{{ osx_settings }}"

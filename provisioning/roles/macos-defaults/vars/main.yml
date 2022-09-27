@@ -1,0 +1,109 @@
+---
+osx_settings:
+  - domain: NSGlobalDomain
+    key: AppleInterfaceStyle
+    type: string
+    value: Dark
+  - domain: NSGlobalDomain
+    key: AppleShowAllExtensions
+    type: bool
+    value: true
+  - domain: NSGlobalDomain
+    key: AppleShowScrollBars
+    type: string
+    value: Always
+  - domain: NSGlobalDomain
+    key: InitialKeyRepeat
+    type: int
+    value: 15
+  - domain: NSGlobalDomain
+    key: KeyRepeat
+    type: int
+    value: 2
+  - domain: NSGlobalDomain
+    key: com.apple.trackpad.scaling
+    type: float
+    value: 2.5
+
+  - domain: com.apple.com.apple.ActivityMonitor
+    key: IconType
+    type: int
+    value: 6
+
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: Clicking
+    type: bool
+    value: true
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadThreeFingerDrag
+    type: bool
+    value: true
+
+  - domain: com.apple.desktopservices
+    key: DSDontWriteNetworkStores
+    type: bool
+    value: true
+
+  - domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: true
+  - domain: com.apple.dock
+    key: tilesize
+    type: float
+    value: 24
+
+  - domain: com.apple.finder
+    key: AppleShowAllFiles
+    type: bool
+    value: true
+  - domain: com.apple.finder
+    key: FXPreferredViewStyle
+    type: string
+    value: clmv
+  - domain: com.apple.finder
+    key: FXRemoveOldTrashItems
+    type: bool
+    value: true
+  - domain: com.apple.finder
+    key: ShowPathbar
+    type: bool
+    value: true
+
+  - domain: com.apple.iphonesimulator
+    key: ScreenShotSaveLocation
+    type: string
+    value: ~/Screenshots
+
+  - domain: com.apple.menuextra.battery
+    key: ShowPercent
+    type: string
+    value: YES
+
+  - domain: com.apple.menuextra.clock
+    key: DateFormat
+    type: string
+    value: EEE H:mm:ss
+
+  - domain: com.apple.Safari.SandboxBroker
+    key: ShowDevelopMenu
+    type: bool
+    value: true
+
+  - domain: com.apple.screencapture
+    key: disable-shadow
+    type: bool
+    value: true
+  - domain: com.apple.screencapture
+    key: location
+    type: string
+    value: ~/Screenshots
+  - domain: com.apple.screencapture
+    key: showsCursor
+    type: bool
+    value: true
+
+  # - domain: com.apple.universalaccess
+  #   key: mouseDriverCursorSize
+  #   type: float
+  #   value: 2.5
