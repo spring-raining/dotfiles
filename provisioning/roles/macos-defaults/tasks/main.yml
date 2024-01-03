@@ -5,7 +5,7 @@
     state: directory
 
 - name: Set macOS defaults
-  osx_defaults: >
+  community.general.osx_defaults: >
     domain="{{ item.domain }}"
     key="{{ item.key }}"
     type="{{ item.type }}"

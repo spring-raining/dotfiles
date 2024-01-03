@@ -1,0 +1,70 @@
+---
+- name: Get the latest asdf version
+  shell: |
+    curl -s https://api.github.com/repos/asdf-vm/asdf/tags | jq -r '.[0].name'
+  register: asdf_version
+
+- name: Install asdf
+  shell: |
+    git -C ~/.asdf switch --detach {{ asdf_version.stdout }} \
+    || git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch {{ asdf_version.stdout }}
+
+- name: Add initialize script of asdf
+  blockinfile:
+    path: ~/dotfiles/zsh/local.zsh
+    marker: "# {mark} ANSIBLE MANAGED BLOCK FOR ASDF"
+    insertafter: EOF
+    block: |
+      export ASDF_CONFIG_FILE=~/dotfiles/asdfrc
+      export ASDF_GOLANG_DEFAULT_PACKAGES_FILE=~/dotfiles/asdf/golang/.default-golang-pkgs
+      export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+      export ASDF_NPM_DEFAULT_PACKAGES_FILE=~/dotfiles/asdf/nodejs/.default-npm-packages
+      export ASDF_PYTHON_DEFAULT_PACKAGES_FILE=~/dotfiles/asdf/python/.default-python-packages
+      export ASDF_GEM_DEFAULT_PACKAGES_FILE=~/dotfiles/asdf/ruby/.default-gems
+      . "$HOME/.asdf/asdf.sh"
+      # Golang
+      . "$HOME/.asdf/plugins/golang/set-env.zsh"
+
+- name: Add asdf plugins
+  loop: "{{ asdf_plugins | flatten(levels=1) }}"
+  shell: |
+    ~/.asdf/bin/asdf plugin add {{ item.name }} {{ item.url }}
+  register: result
+  changed_when: '"already added" not in result.stdout'
+
+- name: Install and enable the latest version of Node.js
+  shell: |
+    source ~/.zshrc
+    asdf nodejs update-nodebuild
+    LTS_VERSION="$(asdf nodejs resolve lts --latest-available)"
+    asdf install nodejs $LTS_VERSION
+    asdf global nodejs $LTS_VERSION
+  args:
+    executable: /bin/zsh
+
+- name: Enable Corepack and package managers
+  shell: |
+    source ~/.zshrc
+    corepack enable
+    corepack prepare yarn@1 --activate
+    corepack prepare pnpm@latest --activate
+    asdf reshim nodejs
+  args:
+    executable: /bin/zsh
+  register: result
+
+- name: Install and enable the latest version of packages
+  shell: |
+    source ~/.zshrc
+    asdf install "{{ item }}" latest
+    asdf global "{{ item }}" latest
+    asdf reshim "{{ item }}" latest
+  args:
+    executable: /bin/zsh
+  loop:
+    - deno
+    - golang
+    - python
+    - poetry
+    - ruby
+    - rust

@@ -1,19 +1,37 @@
 ---
+- name: Check homebrew exists
+  command: which brew
+  register: brew_installed
+  ignore_errors: yes
+
+- name: Install homebrew if not exists
+  shell: |
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  when: brew_installed.rc != 0
+
+- name: Add initialize script of homebrew
+  blockinfile:
+    path: ~/dotfiles/zsh/local.zsh
+    marker: "# {mark} ANSIBLE MANAGED BLOCK FOR HOMEBREW"
+    insertafter: EOF
+    block: |
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+
 - name: Add homebrew taps
-  homebrew_tap: tap={{ item }} state=present
+  community.general.homebrew_tap: tap={{ item }} state=present
   with_items: "{{ homebrew_taps }}"
 
 - name: Update homebrew
-  homebrew: update_homebrew=yes
+  community.general.homebrew: update_homebrew=yes
 
 - name: Install cask packages
-  homebrew_cask: >
+  community.general.homebrew_cask: >
     name="{{ item.name }}"
     state="{{ item.state | default('installed') }}"
   with_items: "{{ homebrew_cask_packages }}"
 
 - name: Install packages
-  homebrew: >
+  community.general.homebrew: >
     name="{{ item.name }}"
     state="{{ item.state | default('latest') }}"
     install_options="{{ item.install_options | default() | join(',')

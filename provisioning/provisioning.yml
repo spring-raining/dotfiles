@@ -4,7 +4,4 @@
   roles:
     - macos-defaults
     - install-via-homebrew
-    - node
-    - python
-    - ruby
-    - rust
+    - asdf

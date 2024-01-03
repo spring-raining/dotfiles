@@ -1,7 +1,7 @@
 ---
 homebrew_taps:
-  - homebrew/cask
   - homebrew/cask-versions
+  - oven-sh/bun
 
 homebrew_packages:
   # - { name: ansible}
@@ -12,13 +12,14 @@ homebrew_packages:
   - { name: awscli }
   - { name: boost }
   - { name: brotli }
+  - { name: bun }
   #- { name: cabal-install }
   - { name: cairo }
   - { name: carthage }
   - { name: cmake }
   - { name: cowsay }
+  - { name: coreutils }
   - { name: curl }
-  - { name: deno }
   - { name: editorconfig }
   - { name: ffmpeg }
   # - { name: flow }
@@ -29,7 +30,7 @@ homebrew_packages:
   - { name: gibo }
   - { name: git }
   - { name: git-lfs }
-  - { name: go }
+  - { name: gpg }
   - { name: graphviz }
   - { name: htop }
   - { name: hub }
@@ -62,6 +63,7 @@ homebrew_packages:
   - { name: redis }
   #- { name: sbt }
   - { name: sqlite }
+  - { name: tcl-tk }
   - { name: tig }
   - { name: tmux }
   - { name: tree }
@@ -70,6 +72,7 @@ homebrew_packages:
   - { name: wget }
   - { name: xz }
   - { name: yq }
+  - { name: zlib }
   - { name: zsh }
 
 homebrew_cask_packages:
@@ -77,10 +80,12 @@ homebrew_cask_packages:
   - { name: adobe-creative-cloud }
   # - { name: adoptopenjdk }
   #- { name: android-sdk }
+  - { name: ankerwork }
   # - { name: atom }
   - { name: brave-browser }
-  - { name: charles }
+  # - { name: charles }
   - { name: coteditor }
+  - { name: db-browser-for-sqlite }
   - { name: deepl }
   - { name: discord }
   - { name: docker }
@@ -88,7 +93,7 @@ homebrew_cask_packages:
   - { name: figma }
   - { name: firefox }
   - { name: firefox-nightly }
-  - { name: fontexplorer-x-pro }
+  # - { name: fontexplorer-x-pro }
   #- { name: github }
   - { name: glyphs }
   - { name: google-drive }
@@ -96,22 +101,24 @@ homebrew_cask_packages:
   - { name: google-chrome-beta }
   - { name: google-chrome-canary }
   - { name: google-cloud-sdk }
-  - { name: google-japanese-ime }
+  # - { name: google-japanese-ime }
   - { name: grammarly }
   - { name: grandperspective }
-  - { name: gyazo }
+  # - { name: gyazo }
   #- { name: hyper }
-  - { name: iterm2 }
+  # - { name: iterm2 }
   - { name: jetbrains-toolbox }
   - { name: karabiner-elements }
   - { name: kap }
   - { name: keycastr }
+  - { name: medis }
   #- { name: nextcloud}
+  - { name: proxyman }
   - { name: raycast }
   #- { name: rightfont }
   - { name: safari-technology-preview }
   - { name: sequel-ace }
-  - { name: sketch }
+  # - { name: sketch }
   #- { name: skype }
   - { name: slack }
   - { name: sloth }
