@@ -41,7 +41,7 @@ alias zshrc="vim ~/dotfiles/zsh/local.zsh"
 # functions
 #
 function peco-select-history {
-  BUFFER=$(history -n 1 | tac | peco --prompt="history>" --query "$LBUFFER")
+  BUFFER=$(history -n 1 | tail -r | peco --prompt="history>" --query "$LBUFFER")
   CURSOR=$#BUFFER
   zle clear-screen
 }
