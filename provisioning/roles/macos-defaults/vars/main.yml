@@ -32,8 +32,8 @@ osx_settings:
 
   - domain: com.apple.AppleMultitouchTrackpad
     key: Clicking
-    type: bool
-    value: true
+    type: int
+    value: 1
   - domain: com.apple.AppleMultitouchTrackpad
     key: TrackpadThreeFingerDrag
     type: bool
@@ -52,6 +52,14 @@ osx_settings:
     key: tilesize
     type: float
     value: 24
+  - domain: com.apple.dock
+    key: magnification
+    type: bool
+    value: true
+  - domain: com.apple.dock
+    key: largesize
+    type: float
+    value: 64
 
   - domain: com.apple.finder
     key: AppleShowAllFiles
@@ -103,7 +111,12 @@ osx_settings:
     type: bool
     value: true
 
-  # - domain: com.apple.universalaccess
-  #   key: mouseDriverCursorSize
-  #   type: float
-  #   value: 2.5
+  # Check System Settings > Privacy & Security > Full Disk Access to enable this
+  - domain: com.apple.universalaccess
+    key: mouseDriverCursorSize
+    type: float
+    value: 2.5
+  - domain: com.apple.universalaccess
+    key: reduceMotion
+    type: bool
+    value: true

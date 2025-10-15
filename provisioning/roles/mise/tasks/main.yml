@@ -1,0 +1,43 @@
+---
+- name: Check if mise is already installed
+  tags: mise
+  shell: which mise || echo "not_found"
+  register: mise_installed
+  changed_when: false
+
+- name: Install mise
+  tags: mise
+  shell: |
+    curl https://mise.run | sh
+  when: mise_installed.stdout == "not_found"
+
+- name: Add initialize script of mise
+  tags: mise
+  blockinfile:
+    path: ~/dotfiles/zsh/local.zsh
+    marker: "# {mark} ANSIBLE MANAGED BLOCK FOR MISE"
+    insertafter: EOF
+    block: |
+      export MISE_CONFIG_DIR=~/dotfiles/mise
+      export MISE_DATA_DIR=~/.local/share/mise
+      export MISE_GLOBAL_CONFIG_FILE=~/dotfiles/mise/config.toml
+      if command -v ~/.local/bin/mise >/dev/null 2>&1; then
+        eval "$(~/.local/bin/mise activate zsh)"
+      fi
+
+- name: Install mise tools
+  tags: mise
+  shell: |
+    source ~/.zshrc
+    mise install
+  args:
+    executable: /bin/zsh
+
+- name: Add mise completion
+  tags: mise
+  shell: |
+    source ~/.zshrc
+    mise completion zsh >! ~/dotfiles/zsh/site-functions/_mise
+  args:
+    executable: /bin/zsh
+  changed_when: false

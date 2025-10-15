@@ -25,16 +25,16 @@
   community.general.homebrew: update_homebrew=yes
 
 - name: Install cask packages
-  community.general.homebrew_cask: >
-    name="{{ item.name }}"
-    state="{{ item.state | default('installed') }}"
+  community.general.homebrew_cask:
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('installed') }}"
   with_items: "{{ homebrew_cask_packages }}"
 
 - name: Install packages
-  community.general.homebrew: >
-    name="{{ item.name }}"
-    state="{{ item.state | default('latest') }}"
-    install_options="{{ item.install_options | default() | join(',')
-      if item.install_options is not string
-      else item.install_options }}"
+  community.general.homebrew:
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('latest') }}"
+    install_options: "{{ item.install_options | default() | join(',')
+      if item.install_options is defined and item.install_options is not string
+      else item.install_options | default(omit) }}"
   with_items: "{{ homebrew_packages }}"

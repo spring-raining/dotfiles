@@ -1,6 +1,5 @@
 ---
 homebrew_taps:
-  - homebrew/cask-versions
   - oven-sh/bun
 
 homebrew_packages:
@@ -37,7 +36,7 @@ homebrew_packages:
   - { name: imagemagick }
   - { name: jpeg }
   - { name: jq }
-  - { name: int128/kubelogin/kubelogin }
+  #- { name: int128/kubelogin/kubelogin }
   - { name: kubernetes-cli }
   - { name: lame }
   - { name: libpng }
@@ -92,17 +91,17 @@ homebrew_cask_packages:
   - { name: dropbox }
   - { name: figma }
   - { name: firefox }
-  - { name: firefox-nightly }
+  - { name: firefox@nightly }
   # - { name: fontexplorer-x-pro }
   #- { name: github }
   - { name: glyphs }
   - { name: google-drive }
   #- { name: google-chrome }
-  - { name: google-chrome-beta }
-  - { name: google-chrome-canary }
+  - { name: google-chrome@beta }
+  - { name: google-chrome@canary }
   - { name: google-cloud-sdk }
   # - { name: google-japanese-ime }
-  - { name: grammarly }
+  #- { name: grammarly }
   - { name: grandperspective }
   # - { name: gyazo }
   #- { name: hyper }

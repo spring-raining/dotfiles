@@ -84,3 +84,9 @@ if [ -f $uc_fname ]; then
   fi
   source $uc_fname
 fi
+
+#
+# Enable autocompletion
+#
+fpath=(~/dotfiles/zsh/site-functions $fpath)
+autoload -Uz compinit && compinit

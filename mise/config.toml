@@ -1,0 +1,25 @@
+[tools]
+node = "24.10"
+python = "3.10"
+go = "1.24"
+ruby = "3.3"
+rust = "1.86"
+deno = "2.2"
+yarn = "1.22"
+bun = "1.2"
+pnpm = "10"
+"npm:@vivliostyle/cli" = "latest"
+"npm:npm-check-updates" = "latest"
+"go:github.com/boyter/scc" = "latest"
+"npm:tsx" = "latest"
+"npm:@anthropic-ai/claude-code" = "latest"
+"npm:wrangler" = "latest"
+"npm:@google/gemini-cli" = "latest"
+"npm:@openai/codex" = "latest"
+
+[settings]
+experimental = true
+idiomatic_version_file_enable_tools = ["node"]
+
+[settings.npm]
+bun = true
