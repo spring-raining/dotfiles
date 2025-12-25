@@ -1,49 +1,45 @@
 // Place your settings in this file to overwrite the default settings
 {
-  "[typescript]": {
+  "[typescript][typescriptreact][javascript][javascriptreact][json][jsonc][html][css]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[typescriptreact]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.formatOnSave": true
+  "[mdx]": {
+    "editor.wordWrap": "on",
   },
   "editor.bracketPairColorization.enabled": false,
   "editor.renderWhitespace": "boundary",
   "editor.renderControlCharacters": true,
   "editor.wordWrap": "off",
-  "editor.fontFamily": "'Inconsolata for Powerline', Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 14,
-  "editor.fontWeight": "500",
-  "editor.lineHeight": 20,
+  "editor.fontFamily": "Monaspace Argon Var",
+  "editor.fontSize": 13,
+  "editor.fontWeight": "400",
+  "editor.fontLigatures": "'cv01' 2, 'calt', 'ss01', 'ss03', 'ss04', 'ss07', 'ss09', 'liga'",
+  "editor.lineHeight": 22,
   "editor.minimap.enabled": false,
   "editor.mouseWheelZoom": false,
   "workbench.colorTheme": "Monokai",
   "workbench.colorCustomizations": {
     "[Monokai]": {
-      "editor.background": "#000000",
+      "editor.background": "#000",
       "statusBar.background": "#1e815e"
-    }
+    },
+    "editor.lineHighlightBackground": "#3755715c",
+    "editor.lineHighlightBorder": "#9fced11f"
   },
+  "emmet.excludeLanguages": [],
   "emmet.includeLanguages": {
     "vue-html": "html",
     "javascript": "javascriptreact",
     "typescript": "javascriptreact",
-    "typescriptreact": "javascriptreact"
+    "typescriptreact": "javascriptreact",
+    "markdown": "html",
+    "mdx": "html"
   },
   "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
   "emmet.triggerExpansionOnTab": true,
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   "typescript.check.workspaceVersion": false,
   "typescript.check.tscVersion": false,
-  "workbench.activityBar.visible": true,
   "extensions.ignoreRecommendations": false,
   "explorer.confirmDragAndDrop": false,
   "rust.mode": "legacy",
@@ -54,7 +50,6 @@
   "git.autofetch": true,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
   "typescript.updateImportsOnFileMove.enabled": "never",
   "gitlens.codeLens.authors.enabled": false,
@@ -62,6 +57,7 @@
   "eslint.validate": [
     "javascript",
     "javascriptreact",
+    "astro",
     "typescript",
     "typescriptreact"
   ],
@@ -70,9 +66,6 @@
   },
   "typescript.tsserver.log": "off",
   "python.jediEnabled": false,
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -81,11 +74,6 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "python.languageServer": "Pylance",
   "python.showStartPage": false,
-  "cloudcode.gke": {
-    "projectIds": [
-      "sustained-spark-267513"
-    ]
-  },
   "latex-workshop.message.update.show": false,
   "editor.tabSize": 2,
   "[yaml]": {
@@ -93,22 +81,25 @@
   },
   "jupyter.askForKernelRestart": false,
   "jupyter.alwaysTrustNotebooks": true,
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "polacode.backgroundColor": "#ffffff",
+  "polacode.backgroundColor": "#000000",
   "polacode.transparentBackground": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "never",
   "[xml]": {
     "editor.defaultFormatter": "DotJoshJohnson.xml"
   },
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "{hexdiff}:/**/*.*": "hexEditor.hexedit",
+    "*.ipynb": "jupyter.notebook.ipynb",
+    "*.pdf": "hexEditor.hexedit",
+    "*.svg": "default"
   },
   "cSpell.userWords": [
-    "readonly"
+    "pressable",
+    "readonly",
+    "toly",
+    "vivliostyle"
   ],
-  "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.folders.theme": "none",
   "material-icon-theme.files.associations": {
     "package.json": "nodejs_alt",
@@ -118,16 +109,14 @@
     ".node-version": "nodejs_alt"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true
   },
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "cloudcode.enableMinikubeGcpAuthPlugin": false,
-  "terminal.integrated.fontFamily": "Meslo LG S DZ for Powerline",
-  "terminal.integrated.fontSize": 10,
-  "editor.guides.bracketPairs": "active",
-  "editor.guides.indentation": true,
+  // "terminal.integrated.fontFamily": "Monaspace Neon NF",
   "editor.stickyScroll.enabled": true,
   "css.validate": false,
   "less.validate": false,
@@ -135,7 +124,77 @@
   "[css,scss]": {
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
-      "source.fixAll.stylelint": true
-    },
-  }
+      "source.fixAll.stylelint": "explicit"
+    }
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "files.associations": {
+    "*.cp": "cpp",
+    "*.ftlh": "ftl"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "terminal.integrated.scrollback": 1000000,
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "prettier.singleQuote": true,
+  "prettier.requireConfig": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "terminal.integrated.allowChords": false,
+  "volar.inlayHints.eventArgumentInInlineHandlers": false,
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode",
+    "editor.formatOnSave": true
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "figma.autocompleteBlocks": true,
+  "search.followSymlinks": false,
+  "prisma.showPrismaDataPlatformNotification": false,
+  "tailwindCSS.emmetCompletions": true,
+  "application.shellEnvironmentResolutionTimeout": 60,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "mdx": false
+  },
+  "stylelint.validate": [
+    "css",
+    "postcss",
+    "scss"
+  ],
+  "security.workspace.trust.untrustedFiles": "open",
+  "security.workspace.trust.enabled": false,
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "codesnap.shutterAction": "copy",
+  "codesnap.showWindowControls": false,
+  "codesnap.showLineNumbers": false,
+  "codesnap.transparentBackground": true,
+  "codesnap.boxShadow": "rgba(0, 0, 0, 0.55) 0px 8px 28px",
+  "cSpell.enabledNotifications": {
+    "Maximum Word Length Exceeded": false,
+    "Lines too Long": false,
+    "Average Word Length too Long": false
+  },
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "terminal.integrated.allowedLinkSchemes": [
+    "file",
+    "http",
+    "https",
+    "mailto",
+    "vscode",
+    "vscode-insiders",
+    "docker-desktop"
+  ],
+  "terminal.integrated.stickyScroll.enabled": false,
+  "claudeCode.preferredLocation": "panel",
 }
