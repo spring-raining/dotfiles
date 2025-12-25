@@ -38,6 +38,10 @@ osx_settings:
     key: TrackpadThreeFingerDrag
     type: bool
     value: true
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadThreeFingerVertSwipeGesture
+    type: int
+    value: 2
 
   - domain: com.apple.desktopservices
     key: DSDontWriteNetworkStores
@@ -60,6 +64,10 @@ osx_settings:
     key: largesize
     type: float
     value: 64
+  - domain: com.apple.dock
+    key: showAppExposeGestureEnabled
+    type: bool
+    value: true
 
   - domain: com.apple.finder
     key: AppleShowAllFiles
@@ -92,6 +100,10 @@ osx_settings:
     key: DateFormat
     type: string
     value: EEE H:mm:ss
+  - domain: com.apple.menuextra.clock
+    key: ShowSeconds
+    type: bool
+    value: true
 
   - domain: com.apple.Safari.SandboxBroker
     key: ShowDevelopMenu
@@ -118,5 +130,9 @@ osx_settings:
     value: 2.5
   - domain: com.apple.universalaccess
     key: reduceMotion
+    type: bool
+    value: true
+  - domain: com.apple.universalaccess
+    key: flashScreen
     type: bool
     value: true

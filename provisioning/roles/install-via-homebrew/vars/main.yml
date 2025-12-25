@@ -63,6 +63,7 @@ homebrew_packages:
   #- { name: sbt }
   - { name: sqlite }
   - { name: tcl-tk }
+  - { name: terminal-notifier }
   - { name: tig }
   - { name: tmux }
   - { name: tree }
